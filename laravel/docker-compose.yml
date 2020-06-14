@@ -1,0 +1,39 @@
+version: '3'
+services:
+  proxy:
+    image: nginx:latest
+    container_name: proxy
+    ports: 
+      - "80:80"
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - nginx
+    restart: "unless-stopped"  
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    expose:
+      - "80"
+    volumes:
+      - ./source:/source
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+    restart: "unless-stopped"
+  php:
+    build:
+        context: ./php-fpm
+    container_name: php-fpm
+    expose:
+      - "9000"
+      - "6001"
+    volumes:
+      - ./source:/source
+    restart: "unless-stopped"
+  redis:
+    image: redis:4.0
+    container_name: redis
+    restart: "on-failure"
+    expose:
+      - "6379"
