@@ -1,4 +1,5 @@
 FROM php:7.4-fpm
+MAINTAINER JeongKuk Seo <wjdrnr6662@gmail.com>
 
 RUN apt-get update
 RUN apt-get install -y curl \

@@ -12,5 +12,4 @@ Docker container quick start
 
 # Getting Started
 1. git clone https://github.com/programmer-sjk/container-quickstart.git
-2. cd container-quickstart/laravel
-3. docker-compose up -d
+2. Please Click folder which you wanna install, and then read README.md
