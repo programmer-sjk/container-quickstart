@@ -8,7 +8,7 @@
 ## Design
 * This has 2 container.
 * first container is <b>nginx</b> for reverse proxy. this first get packet from client and then send it to web server
-* second container is <b>exoress</b>
+* second container is <b>exress</b>
 ![design](../images/express_design.PNG)
 
 # Getting Started
