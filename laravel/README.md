@@ -6,9 +6,9 @@
 
 ## Design
 * This has 3 container.
-* one is nginx for reverse proxy. this first get packet from client and then send it to web server
-* second is nginx for web server to execute index.php
-* third is laravel 
+* first container is <b>nginx</b> for reverse proxy. this first get packet from client and then send it to web server
+* second container is <b>nginx</b> for web server to execute index.php
+* third is <b>laravel</b>
 ![design](../images/laravel_design.PNG)
 
 # Getting Started
