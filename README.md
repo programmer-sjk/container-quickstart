@@ -9,6 +9,7 @@ Docker container quick start
 
 ## Available Framework
 * Laravel
+* Express
 
 # Getting Started
 1. git clone https://github.com/programmer-sjk/container-quickstart.git
